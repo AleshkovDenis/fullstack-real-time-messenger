@@ -11,7 +11,7 @@ const ToggleColorMode: React.FC = () => {
 
   const renderIcon = () => (colorMode === "dark" ? <SunIcon /> : <MoonIcon />);
 
-  return <Button onClick={handleClick}>{renderIcon()}</Button>;
+  return <Button position="absolute" right="5px" top="5px" onClick={handleClick}>{renderIcon()}</Button>;
 };
 
 export default ToggleColorMode;

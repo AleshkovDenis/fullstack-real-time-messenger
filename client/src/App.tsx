@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { ToggleColorMode } from "@/components";
 
 function App() {
