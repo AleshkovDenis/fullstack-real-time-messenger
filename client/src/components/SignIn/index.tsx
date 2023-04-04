@@ -6,8 +6,6 @@ import * as Yup from "yup";
 import { TextField } from "@/components";
 import { useNavigate } from "react-router-dom";
 
-console.log('asdasd')
-
 const Login: React.FC = () => {
   const navigate = useNavigate();
   return (
@@ -24,7 +22,6 @@ const Login: React.FC = () => {
           .max(15, "too long"),
       })}
       onSubmit={(values, actions) => {
-        console.log("actions", actions);
         alert(JSON.stringify(values)), actions.resetForm();
       }}
     >
