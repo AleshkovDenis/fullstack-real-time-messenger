@@ -31,8 +31,24 @@ const SignUp: React.FC = () => {
           .max(15, "too long"),
       })}
       onSubmit={(values, actions) => {
-        console.log("actions", actions);
-        alert(JSON.stringify(values)), actions.resetForm();
+        fetch("http://localhost:3000", {
+          method: "POST",
+          credentials: "include",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        })
+          .then((res) => {
+            console.log("res", res);
+            return res.json();
+          })
+          .then((data) => {
+            console.log("data", data);
+          })
+          .catch(() => {
+            return;
+          });
       }}
     >
       {(form) => (
