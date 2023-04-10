@@ -31,7 +31,7 @@ const SignUp: React.FC = () => {
           .max(15, "too long"),
       })}
       onSubmit={(values, actions) => {
-        fetch("http://localhost:3000", {
+        fetch("http://localhost:3000/auth/signup", {
           method: "POST",
           credentials: "include",
           headers: {

@@ -3,8 +3,7 @@ import http from "http";
 import cors from "cors";
 import { Server } from "socket.io";
 import session from "express-session";
-
-import dotenv from "dotenv";
+import * as dotenv from 'dotenv'
 
 import { authRouter } from "./routes";
 
